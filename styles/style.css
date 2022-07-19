@@ -18,6 +18,9 @@ main {
   margin-top: 21px;
   border-radius: 5px;
 }
+.margin-bottom {
+  margin-bottom: 20px;
+}
 /* Navbar */
 header {
   width: 100vw;
@@ -36,6 +39,7 @@ header {
 .logo {
   display: flex;
   align-items: center;
+  margin-left: 16px;
 }
 .logo img {
   height: 52px;
@@ -152,4 +156,42 @@ hr {
   padding: 5px;
   width: 95px;
   text-align: center;
+}
+
+/* Media Queries */
+
+/* Mobile Devices */
+@media only screen and (max-width: 688px) {
+  .links {
+    display: none;
+  }
+  .container {
+    width: 90%;
+    padding: 16px;
+    padding-bottom: 30px;
+  }
+  .players,
+  .blogs,
+  .courses {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  .courses {
+    grid-row-gap: 24px;
+  }
+  .player,
+  .blog {
+    flex-direction: column;
+  }
+}
+/* Tablet Devices */
+@media only screen and (min-width: 669px) and (max-width: 992px) {
+  .container {
+    width: 85%;
+  }
+  .players,
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+  }
 }
